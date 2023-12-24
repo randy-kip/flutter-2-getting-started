@@ -26,23 +26,27 @@ class MenuDrawer extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.blueGrey),
         child: Text('Globo Fitness',
             style: TextStyle(color: Colors.white, fontSize: 28))));
-    for (String element in menuTitles) {
+    for (var element in menuTitles) {
       Widget screen = Container();
       menuItems.add(ListTile(
-          title: Text(element, style: const TextStyle(fontSize: 18)),
-          onTap: () {
-            switch (element) {
-              case 'Home':
-                screen = const IntroScreen();
-                break;
-              case 'BMI Calculator':
-                screen = const BmiScreen();
-                break;
-            }
-            Navigator.of(context).pop();
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => screen));
-          }));
+        title: Text(
+          element,
+          style: const TextStyle(fontSize: 18),
+        ),
+        onTap: () {
+          switch (element) {
+            case 'Home':
+              screen = const IntroScreen();
+              break;
+            case 'BMI Calculator':
+              screen = const BmiScreen();
+              break;
+          }
+          Navigator.of(context).pop();
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => screen));
+        },
+      ));
     }
     return menuItems;
   }

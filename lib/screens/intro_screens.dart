@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:globo_fitness/shared/menu_bottom.dart';
-import 'package:globo_fitness/shared/menu_drawer.dart';
+import '../shared/menu_bottom.dart';
+import '../shared/menu_drawer.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -39,5 +39,21 @@ class IntroScreen extends StatelessWidget {
                     )),
           )),
         ));
+  }
+}
+
+class HelloYou extends StatefulWidget {
+  const HelloYou({Key? key}) : super(key: key);
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _HelloYouState createState() => _HelloYouState();
+}
+
+class _HelloYouState extends State<HelloYou> {
+  @override
+  Widget build(BuildContext context) {
+    
+    return Container();
   }
 }
