@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import '../screens/bmi_screen.dart';
+import '../screens/bmi_screen.dart';
 import '../screens/intro_screens.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -35,9 +35,9 @@ class MenuDrawer extends StatelessWidget {
               case 'Home':
                 screen = const IntroScreen();
                 break;
-              // case 'BMI Calculator':
-              //   screen = BmiScreen();
-              //   break;
+              case 'BMI Calculator':
+                screen = const BmiScreen();
+                break;
             }
             Navigator.of(context).pop();
             Navigator.of(context)
