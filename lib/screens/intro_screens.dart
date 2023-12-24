@@ -10,7 +10,7 @@ class IntroScreen extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-            image: AssetImage('assets/beach.jpg'),
+            image: AssetImage('assets/gym.jpg'),
             fit: BoxFit.cover,
           )),
           child: Center(
@@ -21,7 +21,7 @@ class IntroScreen extends StatelessWidget {
               color: Colors.white70,
             ),
             child:
-                const Text('Commit to be fit, dare to be great \nwith Globo Fitness',
+                const Text('Train Insane, or Stay the Same!',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 22,
