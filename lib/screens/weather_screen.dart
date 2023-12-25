@@ -11,7 +11,7 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-  Weather result = Weather('','', 0, 0, 0, 0);
+  Weather result = Weather('', '', 0, 0, 0, 0);
   final TextEditingController txtPlace = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -37,10 +37,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
             ),
             weatherRow('Place:', result.name),
             weatherRow('Description:', result.description),
-            weatherRow('Temperature:', result.temperature.toStringAsFixed(2)),
-            weatherRow('Perceived:', result.perceived.toStringAsFixed(2)),
-            weatherRow('Pressure:', result.pressure.toString()),
-            weatherRow('Humidity:', result.humidity.toString())
+            weatherRow('Temperature:', '${result.temperature.toStringAsFixed(2)} C'),
+            weatherRow('Perceived:', '${result.perceived.toStringAsFixed(2)} C'),
+            weatherRow('Pressure:', '${result.pressure} Pa'),
+            weatherRow('Humidity:', '${result.humidity} g.m-3')
           ],
         ),
       ),
