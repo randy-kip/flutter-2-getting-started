@@ -17,7 +17,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Weather'),
+        title: const Text('Weather'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -30,7 +30,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   decoration: InputDecoration(
                     hintText: 'Enter a city',
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.search),
+                      icon: const Icon(Icons.search),
                       onPressed: getData,
                     ),
                   )),
@@ -55,13 +55,25 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   Widget weatherRow(String label, String value) {
     Widget row = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16),
-      child: Row(
-      children: [
-        Expanded(flex: 3, child: Text(label, style: TextStyle(fontSize: 20, color: Theme.of(context).hintColor),)),
-        Expanded(flex: 4,  child:Text(value, style: TextStyle(fontSize: 20, color: Theme.of(context).primaryColor),))
-      ],
-    ));
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        child: Row(
+          children: [
+            Expanded(
+                flex: 3,
+                child: Text(
+                  label,
+                  style: TextStyle(
+                      fontSize: 20, color: Theme.of(context).hintColor),
+                )),
+            Expanded(
+                flex: 4,
+                child: Text(
+                  value,
+                  style: TextStyle(
+                      fontSize: 20, color: Theme.of(context).primaryColor),
+                ))
+          ],
+        ));
     return row;
   }
 }
